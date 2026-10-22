@@ -1,0 +1,291 @@
+{
+  "sections": [
+    {
+      "id": "latest",
+      "title": "Latest Arrivals | 35% OFF",
+      "products": [
+        {
+          "id": "t1",
+          "name": "Regular Tie-Neck Halter Tops",
+          "images": [
+            "https://zand.sgp1.cdn.digitaloceanspaces.com/cache/catalog/products/2026-08/22226042557/STU_1562-cr-450x672.jpg"
+          ],
+          "oldPrice": 14.59,
+          "discount": 30,
+          "price": 10.21,
+          "colors": [
+            {
+              "name": "Peach",
+              "css": "#f3c9b4"
+            },
+            {
+              "name": "White",
+              "css": "#ffffff"
+            }
+          ],
+          "sizes": [
+            "XS",
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+          ],
+          "model": "Model is 175 cm tall and wears size M.",
+          "description": [
+            "Regular fit",
+            "Soft everyday fabric",
+            "Machine wash cold"
+          ]
+        },
+        {
+          "id": "t2",
+          "name": "Cropped Shirts",
+          "images": [
+            "https://zand.sgp1.cdn.digitaloceanspaces.com/cache/catalog/products/2026-08/22226052386/STU_6985-cr-450x672.jpg"
+          ],
+          "oldPrice": 15.59,
+          "discount": 30,
+          "price": 10.91,
+          "colors": [],
+          "sizes": [
+            "XS",
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+          ],
+          "model": "Model is 175 cm tall and wears size M.",
+          "description": [
+            "Regular fit",
+            "Soft everyday fabric",
+            "Machine wash cold"
+          ]
+        },
+        {
+          "id": "t3",
+          "name": "Loose T-Shirt With Printed",
+          "images": [
+            "https://zand.sgp1.cdn.digitaloceanspaces.com/cache/catalog/products/2026-08/21226021815/STU_6823-cr-450x672.jpg"
+          ],
+          "oldPrice": 14.95,
+          "discount": 30,
+          "price": 10.46,
+          "colors": [
+            {
+              "name": "Yellow",
+              "css": "#f8e8a0"
+            },
+            {
+              "name": "Grey",
+              "css": "#777e78"
+            }
+          ],
+          "sizes": [
+            "XS",
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+          ],
+          "model": "Model is 175 cm tall and wears size M.",
+          "description": [
+            "Regular fit",
+            "Soft everyday fabric",
+            "Machine wash cold"
+          ]
+        },
+        {
+          "id": "t4",
+          "name": "Regular T-Shirts",
+          "images": [
+            "https://zand.sgp1.cdn.digitaloceanspaces.com/cache/catalog/products/2026-08/21226021784/STU_9265-cr-450x672.jpg"
+          ],
+          "oldPrice": 14.59,
+          "discount": 30,
+          "price": 10.21,
+          "colors": [],
+          "sizes": [
+            "XS",
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+          ],
+          "model": "Model is 175 cm tall and wears size M.",
+          "description": [
+            "Regular fit",
+            "Soft everyday fabric",
+            "Machine wash cold"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "trend",
+      "title": "On-Trend Tops",
+      "products": [
+        {
+          "id": "t5",
+          "name": "Regular Tie-Neck Halter Tops",
+          "images": [
+            "https://zand.sgp1.cdn.digitaloceanspaces.com/cache/catalog/products/2026-08/21226021667/A7R07864%20-%20Copy-cr-450x672.jpg"
+          ],
+          "oldPrice": 14.59,
+          "discount": 30,
+          "price": 10.21,
+          "colors": [
+            {
+              "name": "Peach",
+              "css": "#f3c9b4"
+            },
+            {
+              "name": "White",
+              "css": "#ffffff"
+            }
+          ],
+          "sizes": [
+            "XS",
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+          ],
+          "model": "Model is 175 cm tall and wears size M.",
+          "description": [
+            "Regular fit",
+            "Soft everyday fabric",
+            "Machine wash cold"
+          ]
+        },
+        {
+          "id": "t6",
+          "name": "Cropped Shirts",
+          "images": [
+            "https://zand.sgp1.cdn.digitaloceanspaces.com/cache/catalog/products/2026-05/21226021903/STU_6027-cr-450x672.jpg"
+          ],
+          "oldPrice": 15.59,
+          "discount": 30,
+          "price": 10.91,
+          "colors": [],
+          "sizes": [
+            "XS",
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+          ],
+          "model": "Model is 175 cm tall and wears size M.",
+          "description": [
+            "Regular fit",
+            "Soft everyday fabric",
+            "Machine wash cold"
+          ]
+        },
+        {
+          "id": "t7",
+          "name": "Loose T-Shirt With Printed",
+          "images": [
+            "https://zand.sgp1.cdn.digitaloceanspaces.com/cache/catalog/products/2025-11/21225081369/ZD__6369-cr-450x672.jpg"
+          ],
+          "oldPrice": 14.95,
+          "discount": 30,
+          "price": 10.46,
+          "colors": [
+            {
+              "name": "Yellow",
+              "css": "#f8e8a0"
+            },
+            {
+              "name": "Grey",
+              "css": "#777e78"
+            }
+          ],
+          "sizes": [
+            "XS",
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+          ],
+          "model": "Model is 175 cm tall and wears size M.",
+          "description": [
+            "Regular fit",
+            "Soft everyday fabric",
+            "Machine wash cold"
+          ]
+        },
+        {
+          "id": "t8",
+          "name": "Regular T-Shirts",
+          "images": [
+            "https://zand.sgp1.cdn.digitaloceanspaces.com/cache/catalog/products/2025-11/21225081433%20Replace/ZD__8340-cr-450x672.jpg"
+          ],
+          "oldPrice": 14.59,
+          "discount": 30,
+          "price": 10.21,
+          "colors": [],
+          "sizes": [
+            "XS",
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+          ],
+          "model": "Model is 175 cm tall and wears size M.",
+          "description": [
+            "Regular fit",
+            "Soft everyday fabric",
+            "Machine wash cold"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "street",
+      "title": "Streetwear",
+      "products": [
+        {
+          "id": "t9",
+          "name": "Gothic Graphic Oversized Cotton Tee",
+          "images": [
+            "images/gothic-tee.jpg"
+          ],
+          "oldPrice": null,
+          "discount": 0,
+          "price": 17.59,
+          "colors": [
+            {
+              "name": "White",
+              "css": "#ffffff",
+              "thumb": "images/gothic-tee-white.jpg"
+            }
+          ],
+          "sizes": [
+            "XS",
+            "S",
+            "M",
+            "L",
+            "XL",
+            "XXL"
+          ],
+          "model": "Model is 180 cm tall and wears size M.",
+          "description": [
+            "Oversized fit with dropped shoulders",
+            "Gothic lettering graphic on the chest",
+            "100% cotton, mid-weight jersey",
+            "Layered black sleeve detail",
+            "Machine wash cold, do not tumble dry"
+          ]
+        }
+      ]
+    }
+  ]
+}
