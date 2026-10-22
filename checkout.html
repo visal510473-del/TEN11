@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Checkout | TEN11</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; color: #111; background: #fff; font-family: Arial, Helvetica, sans-serif; }
+    .navbar { position: sticky; top: 0; z-index: 2; display: flex; align-items: center; justify-content: center; height: 58px; border-bottom: 1px solid #eee; background: #fff; }
+    .logo { color: #000; font-size: 25px; font-weight: 900; letter-spacing: -1.5px; text-decoration: none; }
+    .logo-dot { margin: 0 1px; font-size: 11px; vertical-align: middle; }
+    main { width: min(900px, calc(100% - 32px)); margin: 42px auto; }
+    h1 { margin: 0 0 8px; font-size: 28px; }
+    .intro { margin: 0 0 28px; color: #666; font-size: 14px; line-height: 1.5; }
+    .checkout-layout { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(260px, .8fr); gap: 32px; align-items: start; }
+    .panel { padding: 22px; border: 1px solid #e5e5e5; border-radius: 4px; }
+    h2 { margin: 0 0 16px; font-size: 18px; }
+    .order-item { display: flex; gap: 14px; padding: 14px 0; border-bottom: 1px solid #eee; }
+    .order-item img { width: 70px; height: 88px; object-fit: cover; background: #f1f1f1; }
+    .item-details { flex: 1; min-width: 0; font-size: 14px; }
+    .item-details p { margin: 6px 0 0; color: #666; font-size: 13px; }
+    .item-price { white-space: nowrap; font-size: 14px; font-weight: 600; }
+    .totals { margin-top: 18px; }
+    .total-row { display: flex; justify-content: space-between; gap: 16px; margin: 10px 0; font-size: 14px; }
+    .total-row.grand { margin-top: 16px; padding-top: 15px; border-top: 1px solid #ddd; font-size: 17px; font-weight: 700; }
+    .notice { margin: 0 0 18px; padding: 12px; background: #f6f6f6; color: #555; font-size: 13px; line-height: 1.5; }
+    .back-link { display: inline-block; margin-top: 22px; color: #111; font-size: 14px; }
+    .empty { padding: 18px 0; color: #666; font-size: 14px; }
+    [hidden] { display: none !important; }
+    @media (max-width: 650px) {
+      main { margin: 28px auto; }
+      .checkout-layout { grid-template-columns: 1fr; gap: 18px; }
+      .panel { padding: 18px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="navbar">
+    <a href="index.html" class="logo" aria-label="TEN ELEVEN home">TEN<span class="logo-dot">●</span>ELEVEN</a>
+  </header>
+  <main>
+    <h1>Checkout</h1>
+    <p class="intro">Review the items in your bag before continuing.</p>
+    <p class="notice">Online payment and order submission are not connected yet. This page lets you review your bag.</p>
+    <div class="checkout-layout">
+      <section class="panel" aria-labelledby="order-heading">
+        <h2 id="order-heading">Your order</h2>
+        <div id="order-items"></div>
+        <p class="empty" id="empty-message" hidden>Your bag is empty.</p>
+        <div class="totals">
+          <div class="total-row"><span>Subtotal</span><span id="subtotal">$0.00</span></div>
+          <div class="total-row"><span>Shipping</span><span>Free</span></div>
+          <div class="total-row grand"><span>Total</span><span id="total">$0.00</span></div>
+        </div>
+        <a class="back-link" href="index.html">Continue shopping</a>
+      </section>
+      <aside class="panel">
+        <h2>Next steps</h2>
+        <p class="intro" style="margin-bottom:0">Please review your selected products and quantities. Return to the store to make changes to your bag.</p>
+      </aside>
+    </div>
+  </main>
+  <script>
+    const escapeHtml = value => String(value).replace(/[&<>"']/g, char => ({
+      "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;"
+    })[char]);
+    let items;
+    try {
+      const storedItems = JSON.parse(localStorage.getItem("ten11-bag") || "[]");
+      items = Array.isArray(storedItems) ? storedItems : [];
+    } catch (error) {
+      console.error("Could not read the shopping bag from storage.", error);
+      items = [];
+    }
+    const quantityFor = item => Number.isSafeInteger(Number(item.quantity)) && Number(item.quantity) > 0
+      ? Number(item.quantity)
+      : 1;
+    const money = amount => "$" + amount.toFixed(2);
+    const subtotal = items.reduce((sum, item) => sum + (Number(item.price) || 0) * quantityFor(item), 0);
+    document.getElementById("order-items").innerHTML = items.map(item =>
+      `<article class="order-item">${item.image ? `<img src="${escapeHtml(item.image)}" alt="">` : ""}<div class="item-details"><strong>${escapeHtml(item.name)}</strong><p>Quantity: ${quantityFor(item)}${item.size ? ` · Size: ${escapeHtml(item.size)}` : ""}${item.color ? ` · Color: ${escapeHtml(item.color)}` : ""}</p></div><span class="item-price">${money((Number(item.price) || 0) * quantityFor(item))}</span></article>`
+    ).join("");
+    document.getElementById("empty-message").hidden = items.length > 0;
+    document.getElementById("subtotal").textContent = money(subtotal);
+    document.getElementById("total").textContent = money(subtotal);
+  </script>
+</body>
+</html>
